@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CDChat" representedClassName="CDChat" syncable="YES" codeGenerationType="class">
+        <attribute name="chatId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="chatOwner" attributeType="String" syncable="YES"/>
+        <attribute name="exitedChat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isChatOwner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="chatWithContacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDContact" inverseName="chats" inverseEntity="CDContact" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDChatMessage" inverseName="chat" inverseEntity="CDChatMessage" syncable="YES"/>
+    </entity>
+    <entity name="CDChatMessage" representedClassName="CDChatMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="alertMessage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="chatMessageId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="messageDeliveryStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postedBy" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="postedDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="chat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDChat" inverseName="messages" inverseEntity="CDChat" syncable="YES"/>
+    </entity>
+    <entity name="CDContact" representedClassName="CDContact" syncable="YES" codeGenerationType="class">
+        <attribute name="appContactId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactUserId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDChat" inverseName="chatWithContacts" inverseEntity="CDChat" syncable="YES"/>
+    </entity>
+    <entity name="CDPostedTicket" representedClassName="CDPostedTicket" syncable="YES" codeGenerationType="class">
+        <attribute name="fixtureInfo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="myPost" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numberOfTickets" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postedTicketClosedOut" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postedTicketsId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sellerLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="sellerLocationText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sellerRating" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="sellerReviewScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ticketDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chosenBuyerOffer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDTicketsOffer" inverseName="chosenTicket" inverseEntity="CDTicketsOffer" syncable="YES"/>
+        <relationship name="offers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDTicketsOffer" inverseName="ticket" inverseEntity="CDTicketsOffer" syncable="YES"/>
+    </entity>
+    <entity name="CDTicketsOffer" representedClassName="CDTicketsOffer" syncable="YES" codeGenerationType="class">
+        <attribute name="buyer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="buyerLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="buyerLocationText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="buyerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="buyerRating" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="buyerReportedAsTout" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="buyerReviewScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="offerAcceptedDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="offerDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="offerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offerStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offerTimeOutMinutes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="chosenTicket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPostedTicket" inverseName="chosenBuyerOffer" inverseEntity="CDPostedTicket" syncable="YES"/>
+        <relationship name="ticket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPostedTicket" inverseName="offers" inverseEntity="CDPostedTicket" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDChat" positionX="2284" positionY="-1188" width="128" height="150"/>
+        <element name="CDChatMessage" positionX="2295" positionY="-1134" width="128" height="165"/>
+        <element name="CDContact" positionX="2304" positionY="-1080" width="128" height="120"/>
+        <element name="CDPostedTicket" positionX="2286" positionY="-1089" width="128" height="270"/>
+        <element name="CDTicketsOffer" positionX="2295" positionY="-1026" width="128" height="255"/>
+    </elements>
+</model>

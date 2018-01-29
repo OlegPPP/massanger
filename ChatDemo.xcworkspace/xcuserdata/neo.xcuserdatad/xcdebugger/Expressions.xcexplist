@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[NewChatViewController tableView:cellForRowAtIndexPath:]:NewChatViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.clipsToBounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SearchTicketsViewController tableView:cellForRowAtIndexPath:]:SearchTicketsViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[result.sellerRating objectForKey:@&quot;averageUserRating&quot;] integerValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MyBubblesSizeCalculator textBubbleWidthForLayout:]:MyBubblesSizeCalculator.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "layout.itemWidth">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

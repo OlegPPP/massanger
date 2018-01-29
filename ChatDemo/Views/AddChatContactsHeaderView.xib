@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddChatContactsHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-1R-3vS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-O1-r9Y">
+                            <rect key="frame" x="0.0" y="52" width="375" height="52"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ED9-lO-Jj7">
+                                    <rect key="frame" x="0.0" y="4" width="375" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="WzN-81-0cx"/>
+                                <constraint firstAttribute="trailing" secondItem="ED9-lO-Jj7" secondAttribute="trailing" id="d97-lW-eXc"/>
+                                <constraint firstItem="ED9-lO-Jj7" firstAttribute="centerY" secondItem="Nh0-O1-r9Y" secondAttribute="centerY" id="sJ6-xE-zLa"/>
+                                <constraint firstItem="ED9-lO-Jj7" firstAttribute="leading" secondItem="Nh0-O1-r9Y" secondAttribute="leading" id="vdy-US-3X8"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT CONTACTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aag-WY-vTh">
+                            <rect key="frame" x="18" y="14" width="162.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="0.37854352678571429" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCJ-kb-PIS">
+                            <rect key="frame" x="351" y="14" width="10" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="aag-WY-vTh" firstAttribute="top" secondItem="HPK-1R-3vS" secondAttribute="top" constant="14" id="4PL-Wq-YFL"/>
+                        <constraint firstItem="qCJ-kb-PIS" firstAttribute="centerY" secondItem="aag-WY-vTh" secondAttribute="centerY" id="CzQ-TB-Iga"/>
+                        <constraint firstAttribute="trailing" secondItem="qCJ-kb-PIS" secondAttribute="trailing" constant="14" id="KJX-Md-VIR"/>
+                        <constraint firstItem="Nh0-O1-r9Y" firstAttribute="leading" secondItem="HPK-1R-3vS" secondAttribute="leading" id="N5c-o5-RXf"/>
+                        <constraint firstItem="aag-WY-vTh" firstAttribute="leading" secondItem="HPK-1R-3vS" secondAttribute="leading" constant="18" id="k4A-nA-7n6"/>
+                        <constraint firstAttribute="trailing" secondItem="Nh0-O1-r9Y" secondAttribute="trailing" id="lnN-7J-xwz"/>
+                        <constraint firstAttribute="bottom" secondItem="Nh0-O1-r9Y" secondAttribute="bottom" id="sdr-Gt-bx9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HPK-1R-3vS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9gA-kz-tUn"/>
+                <constraint firstItem="HPK-1R-3vS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UXc-ZR-fQV"/>
+                <constraint firstAttribute="trailing" secondItem="HPK-1R-3vS" secondAttribute="trailing" id="Zk0-vN-SQg"/>
+                <constraint firstAttribute="bottom" secondItem="HPK-1R-3vS" secondAttribute="bottom" id="tCh-fp-8yA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contactsCountLabel" destination="qCJ-kb-PIS" id="DUS-xF-4QR"/>
+                <outlet property="searchBar" destination="ED9-lO-Jj7" id="x9m-4z-XYR"/>
+                <outlet property="searchContainerView" destination="Nh0-O1-r9Y" id="0zy-u0-DDZ"/>
+            </connections>
+            <point key="canvasLocation" x="81.5" y="-172"/>
+        </view>
+    </objects>
+</document>
